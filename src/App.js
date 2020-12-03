@@ -9,6 +9,14 @@ import Article from "./News/Article";
 import Comments from "./News/Comments";
 import CreateArticle from "./News/CreateArticle";
 
+
+import ClickedHook from "./Hooks/ClickedHook";
+import SquareHook from "./Hooks/SquareHook";
+import ToggleTextHook from "./Hooks/ToggleTextHook";
+import CounterHook from "./Hooks/CounterHook";
+import StepCounterHook from "./Hooks/StepCounterHook";
+import RollCallHook from "./Hooks/RollCallHook";
+
 import { Router, Route, Switch } from "react-router-dom";
 import history from "./history";
 
@@ -38,6 +46,20 @@ function App() {
         )} />
         //routes with id parameters must go at the end of the list or they will impact other routes after them!
 
+        <Route exact path="/hooks">
+          <div
+            style={{padding: 100}}
+            >
+            <ClickedHook />
+            <SquareHook colour="hotpink" />
+            <ToggleTextHook initial="Hello" alternate="World" />
+            <CounterHook initial={ 50 } max={ 100 } />
+            <StepCounterHook max={ 100 } step={ 5 } />
+            <RollCallHook names={ ['Penelope Jet', 'June August', 'Someone Somebody', 'Fred Orange'] } />
+            </div>
+          </Route>
+       
+        
       </Switch>
     </Router>
   );
