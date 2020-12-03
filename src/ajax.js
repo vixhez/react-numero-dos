@@ -1,6 +1,8 @@
-import axios from "./axios";
+// import axios from "./axios";
 
 // axios.get("/articles").then(({data}) => console.log(data.data));
+
+// axios.get("/articles/31/comments").then(({data}) => console.log(data.data));
 
 // axios.post("/articles", {
 //     title: "Gorillas and chimps",
@@ -20,6 +22,14 @@ import axios from "./axios";
 //     console.log(data.data.tags);
 // })
 
-axios.delete("/articles/75").then(() => {
-    console.log("Deleted");
-})
+// axios.delete("/articles/75").then(() => {
+//     console.log("Deleted");
+// })
+
+// axios.post("/articles/76/comments", {
+//   comment: "As a gorilla, this post speaks to me. Keep doing what you are doing!!!!11!!1",
+//   email: "mooooo@cluck.fr"
+// })
+// .then(({ data }) => {
+//   console.log(data.data.id);
+// });
